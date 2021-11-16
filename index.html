@@ -66,25 +66,9 @@
                     <div class="col-12 d-flex p-2 align-items-center">
                         <!-- User List -->
                           <ul class="chat_list list-unstyled">
-                              <li>
-                                <img class="rounded-circle me-2 mb-2" src="./img/avatar_1.jpg" alt="user-1">
-                                <span>Michele</span>
-                              </li>
-                              <li>
-                                <img class="rounded-circle me-2 mb-2 mt-2" src="./img/avatar_2.jpg" alt="user-2">
-                                <span>Luisa</span>
-                              </li>
-                              <li>
-                                <img class="rounded-circle me-2 mb-2 mt-2" src="./img/avatar_3.jpg" alt="user-3">
-                                <span>Piero</span>
-                              </li>
-                              <li>
-                                <img class="rounded-circle me-2 mb-2 mt-2" src="./img/avatar_4.jpg" alt="user-4">
-                                <span>Zio</span>
-                              </li>
-                              <li>
-                                <img class="rounded-circle me-2 mb-2 mt-2" src="./img/avatar_5.jpg" alt="user-5">
-                                <span>Orazio</span>
+                              <li v-for="(contact, index) in contacts">
+                                <img class="rounded-circle me-2 mb-2 mt-2" :src="`./img/avatar${contact.avatar}.jpg`" :alt="`${contact.name}`">
+                                <span>{{contact.name}}</span>
                               </li>
                           </ul>
                     </div>
@@ -116,13 +100,13 @@
                                 <div class="col-4 offset-8">
                                     <div class="sent_message rounded-3 p-2  d-flex flex-column">
                                         <span class="sent">Messaggio inviato</span>
-                                        <span class="date-hour d-flex justify-content-end">10/01/2021 15:50:00</span>
+                                        <span class="date-hour d-flex justify-content-end">{{contacts[0].messages[0].date}}</span>
                                     </div>
                                 </div>
                                 <div class="col-4">
                                     <div class="received_message rounded-3 p-2">
                                        <span class="received">Messaggio ricevuto</span>
-                                       <span class="date-hour d-flex justify-content-end">10/01/2021 15:50:00</span>
+                                       <span class="date-hour d-flex justify-content-end">{{contacts[0].messages[0].date}}</span>
                                     </div>
                                 </div>
                             </div>
