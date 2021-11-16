@@ -67,3 +67,27 @@ body {
     color: #52798B;
 }
 
+.searching {
+    background: #FAFAFA;
+}
+
+.searching .searching_button {
+    border: 1px solid #F5F5F5;
+    cursor: pointer;
+}
+
+.input_label::placeholder {
+    font-size: 12px;
+    color: #D8DADB;
+}
+
+.searching .searching_icon {
+    color: #B7BABC;
+}
+
+.search_label .input_label {
+    border: 1px solid #f5f5f5;
+}
+
+
+
