@@ -35,3 +35,10 @@ body {
 .side_header {
     background-color: #EAEAEA;
 }
+
+.refresh, .chat, .settings {
+    color: #B1B1B1;
+    padding: 0px 10px;
+    cursor: pointer;
+}
+
