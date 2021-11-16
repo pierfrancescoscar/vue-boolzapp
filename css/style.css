@@ -83,7 +83,7 @@ body {
     cursor: pointer;
 }
 
-.input_label::placeholder {
+.input_label::placeholder, .writing::placeholder {
     font-size: 12px;
     color: #D8DADB;
 }
@@ -113,9 +113,11 @@ body {
 }
 
 /* Right */
-.right_header {
+
+.right_side {
     background-image: url(../img/mine.jpg);
     object-fit: cover;
+    height: 100%;
 }
 
 .last_access {
@@ -139,7 +141,15 @@ body {
     color: #B1B1B1;
 }
 
+.right_footer {
+    background-color: #F3EEEA;
+}
 
+.emoji, .mic {
+    color: #6B7376;
+    cursor: pointer;
+}
 
-
-
+.writing {
+    border: none;
+}
