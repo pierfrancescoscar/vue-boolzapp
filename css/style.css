@@ -113,9 +113,9 @@ body {
 }
 
 /* Right */
-
-.right_header img {
-    width: 15%;
+.right_header {
+    background-image: url(../img/mine.jpg);
+    object-fit: cover;
 }
 
 .last_access {
