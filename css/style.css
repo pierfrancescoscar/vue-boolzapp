@@ -122,5 +122,24 @@ body {
     font-size: 10px;
 }
 
+.sent_message {
+    background-color: #D5F9BA;
+}
+
+.received_message {
+    background-color: white;
+}
+
+.sent, .received {
+    font-size: 14px;
+}
+
+.date-hour {
+    font-size: 8px;
+    color: #B1B1B1;
+}
+
+
+
 
 
