@@ -104,6 +104,10 @@ const app = new Vue ({
         
         
     },
+    created() {
+        dayjs();
+    },
+
     methods: {
         setChat(index) {
             console.log('Test');
@@ -113,7 +117,7 @@ const app = new Vue ({
         newMessage() {
             if(this.inputText.length > 0) {
                 this.contacts[this.activeIndex].messages.push({
-                    date: 'Test',
+                    date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                     text: this.inputText,
                     status: 'sent',
     
@@ -122,7 +126,7 @@ const app = new Vue ({
                     );
                     setTimeout(() => {
                         this.contacts[this.activeIndex].messages.push({
-                            date: 'Test',
+                            date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                             text: 'Ok',
                             status: 'received',
                             },
