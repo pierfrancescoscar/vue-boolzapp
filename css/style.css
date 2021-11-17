@@ -96,8 +96,10 @@ body {
     border: 1px solid #f5f5f5;
 }
 
+
 .chat_list li {
     border-bottom: 1px solid #f5f5f5;
+    cursor: pointer;
 }
 
 .chat_list li:hover {
