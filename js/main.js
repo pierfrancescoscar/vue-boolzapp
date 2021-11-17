@@ -111,13 +111,27 @@ const app = new Vue ({
         },
 
         newMessage() {
-            contacts[activeIndex].messages.push({
-                date: 'Test',
-                text: this.inputText,
-                status: 'sent',
-            })
-        }
+            if(this.inputText.length > 0) {
+                this.contacts[this.activeIndex].messages.push({
+                    date: 'Test',
+                    text: this.inputText,
+                    status: 'sent',
+    
+    
+                    },
+                    );
+                    setTimeout(() => {
+                        this.contacts[this.activeIndex].messages.push({
+                            date: 'Test',
+                            text: 'Ok',
+                            status: 'received',
+                            },
+                            );
+                    }, 1000) 
+            }
+                
+            },
     },
     
 
-})
+});
