@@ -120,6 +120,7 @@ body {
     background-image: url(../img/mine.jpg);
     object-fit: cover;
     height: 100%;
+    overflow: scroll;
 }
 
 .last_access {
