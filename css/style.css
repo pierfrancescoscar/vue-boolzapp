@@ -126,12 +126,19 @@ body {
     font-size: 10px;
 }
 
-.sent_message {
+.sentMessage {
+    display: flex;
+    align-self: flex-end;
     background-color: #D5F9BA;
+    max-width: 450px;
+
 }
 
-.received_message {
+.receivedMessage {
     background-color: white;
+    display: flex;
+    align-self: flex-start;
+    max-width: 450px;
 }
 
 .sent, .received {

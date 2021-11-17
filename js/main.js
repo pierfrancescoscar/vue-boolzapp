@@ -15,7 +15,8 @@ const app = new Vue ({
     data: {
 
         activeIndex: 0,
-        
+        inputText: '',
+
         contacts: [
             {
                 name: 'Michele',
@@ -99,9 +100,24 @@ const app = new Vue ({
                     }
                 ],
             },
-        ]
+        ],
         
-    }
+        
+    },
+    methods: {
+        setChat(index) {
+            console.log('Test');
+            this.activeIndex = index;
+        },
+
+        newMessage() {
+            contacts[activeIndex].messages.push({
+                date: 'Test',
+                text: this.inputText,
+                status: 'sent',
+            })
+        }
+    },
     
 
 })

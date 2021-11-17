@@ -66,7 +66,8 @@
                     <div class="col-12 d-flex p-2 align-items-center">
                         <!-- User List -->
                           <ul class="chat_list list-unstyled">
-                              <li v-for="(contact, index) in contacts">
+                              <li v-for="(contact, index) in contacts"
+                              @click="setChat(index)">
                                 <img class="rounded-circle me-2 mb-2 mt-2" :src="`./img/avatar${contact.avatar}.jpg`" :alt="`${contact.name}`">
                                 <span>{{contact.name}}</span>
                               </li>
@@ -97,18 +98,21 @@
                     <section class="container pt-5 p-5 flex-grow-1">
                         <div class="col-12">
                             <div class="row">
-                                <div class="col-4 offset-8">
-                                    <div class="sent_message rounded-3 p-2  d-flex flex-column">
-                                        <span class="sent">Messaggio inviato</span>
-                                        <span class="date-hour d-flex justify-content-end">{{contacts[0].messages[0].date}}</span>
+                                <div class="d-flex flex-column">
+                                    <div class="rounded-3 p-2 d-flex flex-column mb-3"
+                                    v-for="element in contacts[activeIndex].messages"
+                                    :class="{receivedMessage: element.status === 'received', sentMessage: element.status === 'sent'}">
+                                        <span class="sent">{{element.text}}</span>
+                                        <span class="date-hour d-flex justify-content-end">{{element.date}}</span>
                                     </div>
                                 </div>
-                                <div class="col-4">
-                                    <div class="received_message rounded-3 p-2">
+                                <!-- <div class="col-4">
+                                    <div class="received_message rounded-3 p-2"
+                                    >
                                        <span class="received">Messaggio ricevuto</span>
                                        <span class="date-hour d-flex justify-content-end">{{contacts[0].messages[0].date}}</span>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </section>
@@ -131,7 +135,8 @@
                 </div>
 
     </div>
-        
+        </div>
+        </div>
     <!-- JS -->
     <script src="./js/main.js"></script>
 </body>
