@@ -82,10 +82,10 @@
                     <div class="side_header col-12 d-flex p-2">
                         <div class="col-6 d-flex align-items-center">
                             <!-- Chatted User Profile Pic -->
-                            <img class="img-45 rounded-circle me-2" src="./img/avatar_6.jpg" alt="chatted-user-pic">
+                            <img class="img-45 rounded-circle me-2" :src="`./img/avatar${contacts[activeIndex].avatar}.jpg`" alt="contacts[activeIndex].name">
                             <!-- Chatted User Name -->
                             <div class="chat_info d-flex flex-column">
-                                <span>Pierfrancesco</span>
+                                <span>{{contacts[activeIndex].name}}</span>
                                 <span class="last_access">Ultimo accesso oggi alle 18.26</span>
                             </div>
                         </div>
