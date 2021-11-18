@@ -164,11 +164,15 @@ const app = new Vue ({
 
         isActiveToggle(index) {
             if (this.isActive === index) {
-                this.isActive = null
+                this.isActive = null;
             } else {
                 this.isActive = index;
             }
             
+        },
+
+        deleteMessage(index) {
+            this.contacts[isActive].splice(index, 1);
         },
     },
 

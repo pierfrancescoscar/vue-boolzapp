@@ -119,7 +119,8 @@
                                     v-if="index === isActive">
                                         <ul class="list-unstyled">
                                             <li>Message info</li>
-                                            <li>Delete message</li>
+                                            <li
+                                            @click="deleteMessage(index)" >Delete message</li>
                                         </ul>
                                     </div>
                                 </div>
