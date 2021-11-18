@@ -139,6 +139,10 @@ const app = new Vue ({
             }
                 
             },
+        
+        searchInput() {
+            console.log(this.searchUser);
+        }
     },
     
 
