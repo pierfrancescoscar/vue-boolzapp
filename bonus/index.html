@@ -105,20 +105,24 @@
                             <div class="row">
                                 <div class="d-flex flex-column">
                                     <div class="rounded-3 p-2 d-flex flex-column mb-3"
-                                    v-for="element in contacts[activeIndex].messages"
+                                    v-for="(element, index) in contacts[activeIndex].messages"
                                     :class="{receivedMessage: element.status === 'received', sentMessage: element.status === 'sent'}">
-                                        <span class="sent">{{element.text}} <i class="fas fa-chevron-down arrowdown"></i></span>
+                                        <span class="sent">{{element.text}} 
+                                        <i class="fas fa-chevron-down arrowdown"
+                                        @click="isActiveToggle(index)">
+                                        </i>
+                                        </span>
                                         
                                         <span class="date-hour d-flex justify-content-end">{{element.date}}</span>
-                                       
-                                    </div>
-                                    <!-- Div when message clicked -->
-                                    <div class="dropdownList rounded-2 p-2 text-center fw-light">
+                                        <!-- Div when message clicked -->
+                                    <div class="dropdownList rounded-2 p-2 text-center fw-light"
+                                    v-show="show == true">
                                         <ul class="list-unstyled">
                                             <li>Message info</li>
                                             <li>Delete message</li>
                                         </ul>
                                     </div>
+                                </div>
                                 </div>
                             </div>
                         </div>

@@ -28,6 +28,8 @@ const app = new Vue ({
         activeIndex: 0,
         inputText: '',
         searchUser: '',
+        isActive: '',
+        show: false,
 
         contacts: [
             {
@@ -158,8 +160,18 @@ const app = new Vue ({
                }
            }
             
-        }
+        },
+
+        isActiveToggle(index) {
+            this.isActive = index;
+            if (this.show) {
+                this.show = false;
+            } else {
+                this.show = true;
+            }
+        },
     },
+
     
 
 });
