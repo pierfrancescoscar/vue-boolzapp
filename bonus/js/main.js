@@ -163,7 +163,11 @@ const app = new Vue ({
         },
 
         isActiveToggle(index) {
-            this.isActive = index;
+            if (this.isActive === index) {
+                this.isActive = null
+            } else {
+                this.isActive = index;
+            }
             
         },
     },
