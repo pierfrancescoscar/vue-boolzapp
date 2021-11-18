@@ -141,7 +141,15 @@ const app = new Vue ({
             },
         
         searchInput() {
-            console.log(this.searchUser);
+            // console.log(this.searchUser);
+           for (let i = 0; i < this.contacts.length; i++ ) {
+               if (this.contacts[i].name.toLowerCase().includes(this.searchUser.toLowerCase())) {
+                   this.contacts[i].visible = true;
+               } else {
+                   this.contacts[i].visible = false;
+               }
+           }
+            
         }
     },
     
