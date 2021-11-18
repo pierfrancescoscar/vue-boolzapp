@@ -61,7 +61,9 @@
                         <!-- Input Label -->
                         <div class="search_label d-flex flex-grow-1">
                             <input class="input_label flex-grow-1 px-2" type="text"
-                            placeholder="Cerca o inizia una nuova chat">
+                            placeholder="Cerca o inizia una nuova chat"
+                            v-model.trim="searchUser"
+                            @keyup="searchUser">
                         </div>
                     </div>
                     <!-- Chat with Users -->
