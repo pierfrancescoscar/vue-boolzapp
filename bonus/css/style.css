@@ -171,12 +171,19 @@ body {
     font-size: 14px;
     margin-top: -20px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-
 }
 
 .dropdownList ul li {
     cursor: pointer;
 }
+
 .dropdownList ul li:hover {
     background-color: #d3d3d3;
+}
+
+.arrowdown {
+    cursor: pointer;
+    display: flex;
+    color: grey;
+    font-size: 12px;
 }
