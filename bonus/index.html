@@ -116,7 +116,7 @@
                                         <span class="date-hour d-flex justify-content-end">{{element.date}}</span>
                                         <!-- Div when message clicked -->
                                     <div class="dropdownList rounded-2 p-2 text-center fw-light"
-                                    v-show="show == true">
+                                    v-if="index === isActive">
                                         <ul class="list-unstyled">
                                             <li>Message info</li>
                                             <li>Delete message</li>

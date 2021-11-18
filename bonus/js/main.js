@@ -29,7 +29,6 @@ const app = new Vue ({
         inputText: '',
         searchUser: '',
         isActive: '',
-        show: false,
 
         contacts: [
             {
@@ -126,6 +125,7 @@ const app = new Vue ({
         setChat(index) {
             console.log('Test');
             this.activeIndex = index;
+            
         },
 
         newMessage() {

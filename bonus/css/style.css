@@ -166,6 +166,7 @@ body {
 
 /* Dropdown on Click Message */
 .dropdownList {
+    position: absolute;
     width: 150px;
     background-color: #f2f2f2;
     font-size: 14px;
