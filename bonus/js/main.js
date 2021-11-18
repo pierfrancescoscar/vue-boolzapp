@@ -125,7 +125,7 @@ const app = new Vue ({
         setChat(index) {
             console.log('Test');
             this.activeIndex = index;
-            
+
         },
 
         newMessage() {
@@ -164,11 +164,7 @@ const app = new Vue ({
 
         isActiveToggle(index) {
             this.isActive = index;
-            if (this.show) {
-                this.show = false;
-            } else {
-                this.show = true;
-            }
+            
         },
     },
 
